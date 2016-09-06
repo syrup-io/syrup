@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
+});
+
+Route::group(['prefix' => 'login'], function () {
+    Route::get('/', function ()    {
+        return view('login.signin');
+    });
+    Route::get('register', function ()    {
+        return view('login.register');
+    });
 });

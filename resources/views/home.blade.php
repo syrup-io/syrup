@@ -7,7 +7,7 @@
       Syrup
   </div>
   <div class="right menu">
-    <a class="ui item">
+    <a class="ui item" href="login/">
       Sign In
     </a>
   </div>

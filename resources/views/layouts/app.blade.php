@@ -11,11 +11,17 @@
         @yield('meta')
 
         <title>@yield('title', 'Syrup')</title>
-        <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
+        <!-- <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}"> -->
 
         <!-- CSS -->
         <link href="{{ elixir('css/frontend.css') }}" rel="stylesheet">
         @yield('styles')
+
+    </head>
+
+    <body>
+        
+        @yield('content')
 
         <!-- Scripts -->
         <script src="{{ elixir('js/frontend.js') }}"></script>
