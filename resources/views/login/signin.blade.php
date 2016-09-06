@@ -27,16 +27,14 @@
           <div class="container">
 
             <div class="ui center aligned basic segment">
-
-              <button class="ui basic button" style="margin-bottom: 10px">
-                  Sign In With Github
-                  <i class="fa fa-github"></i>
-              </button>
-
-              <button class="ui basic button">
-                  Sign In With Bitbucket
-                  <i class="fa fa-bitbucket"></i>
-              </button>
+            <div class="ui centered header">
+                Register with
+            </div>
+              <div class="ui large buttons">
+                <a href="https://github.com/login/oauth/authorize"><button class="ui button"><i class="fa fa-github"></i></button></a>
+                <div class="or"></div>
+                <a href="auth/bitbucket"><button class="ui button"><i class="fa fa-bitbucket"></i></button></a>
+              </div>
 
             </div>
           </div>
