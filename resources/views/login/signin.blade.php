@@ -6,25 +6,40 @@
     <div class="ui raised centered card">
       <div class="content">
           <div class="ui centered header">
-              Syrup
+              Login
           </div>
           <form class="ui form">
             <div class="field">
-              <label>First Name</label>
-              <input type="text" name="first-name" placeholder="First Name">
+              <label>Username</label>
+              <input type="text" name="first-name" placeholder="Username">
             </div>
             <div class="field">
-              <label>Last Name</label>
-              <input type="text" name="last-name" placeholder="Last Name">
+              <label>Password</label>
+              <input type="text" name="last-name" placeholder="Password">
             </div>
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox">
-                <label>I agree to the Terms and Conditions</label>
-              </div>
+            <div class="ui center aligned basic segment">
+                <button class="ui button" type="submit">Submit</button>
             </div>
-            <button class="ui button" type="submit">Submit</button>
           </form>
+          <div class="ui horizontal divider">
+              Or
+          </div>
+          <div class="container">
+
+            <div class="ui center aligned basic segment">
+
+              <button class="ui basic button" style="margin-bottom: 10px">
+                  Sign In With Github
+                  <i class="fa fa-github"></i>
+              </button>
+
+              <button class="ui basic button">
+                  Sign In With Bitbucket
+                  <i class="fa fa-bitbucket"></i>
+              </button>
+
+            </div>
+          </div>
       </div>
     </div>
 </div>
