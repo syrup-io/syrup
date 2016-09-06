@@ -14,6 +14,13 @@ require('laravel-elixir-vue');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    mix.styles([
+        'css/custom.css',
+        '../../node_modules/semantic-ui/dist/semantic.min.css',
+    ], 'public/css/frontend.css', 'resources/assets' )
+    mix.scripts([
+        'js/custom.js',
+        'js/jquery-3.1.0.min.js',
+        '../../node_modules/semantic-ui/dist/semantic.min.js',
+    ], 'public/js/frontend.js', 'resources/assets' )
 });
