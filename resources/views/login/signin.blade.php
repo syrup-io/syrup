@@ -22,14 +22,11 @@
             </div>
           </form>
           <div class="ui horizontal divider">
-              Or
+              Register
           </div>
           <div class="container">
 
             <div class="ui center aligned basic segment">
-            <div class="ui centered header">
-                Register with
-            </div>
               <div class="ui large buttons">
                 <a href="auth/github"><button class="ui button"><i class="fa fa-github"></i></button></a>
                 <div class="or"></div>
