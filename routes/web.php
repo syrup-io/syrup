@@ -10,18 +10,16 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@landing');
+Route::get('/home', 'HomeController@index');
 
 Route::group(['prefix' => 'login'], function () {
     Route::get('/', function ()    {
-        return view('login.signin');
+        return view('login.index');
     });
-    Route::get('register', function ()    {
-        return view('login.register');
-    });
-    Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-    Route::get('auth/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('auth/social/{provider}', 'Auth\LoginController@redirectToProvider');
+    Route::get('auth/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
 });
