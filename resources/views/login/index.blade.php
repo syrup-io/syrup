@@ -15,7 +15,7 @@
             </div>
             <div class="field">
               <label>Password</label>
-              <input type="text" name="last-name" placeholder="Password">
+              <input type="text" name="password" placeholder="Password">
             </div>
             <div class="ui center aligned basic segment">
                 <button class="ui button" type="submit">Submit</button>
