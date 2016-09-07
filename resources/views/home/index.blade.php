@@ -7,9 +7,16 @@
       Syrup
   </div>
   <div class="right menu">
-    <a class="ui item" href="login/">
-      Sign In
-    </a>
+    @if(Auth::user())
+    <div class="ui item">
+        <div style="padding-right: 1em">{{ Auth::user()->name }}</div>
+        <img class="ui avatar image" src="{{ Auth::user()->github_avatar_url }}"></img>
+    </div>
+    @else
+        <a class="ui item" href="login/">
+          Sign In
+        </a>
+    @endif
   </div>
   <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
