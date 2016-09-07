@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Hash;
 use Socialite;
 use Auth;
 use App\User as User;
@@ -48,15 +49,16 @@ class LoginController extends Controller
     public function handleProviderCallback($provider)
     {
         $vcsUser = Socialite::driver($provider)->stateless()->user();
-        $user = User::where('github_id', $vcsUser->getId())->first();
+        $user = User::where('email', $vcsUser->getEmail())->first();
         if (! $user) {
+            $id = $vcsUser->getId()->toString();
             $user = User::create([
                 'name' => $vcsUser->getName(),
                 'email' => $vcsUser->getEmail(),
-                'github_id' => $vcsUser->getId()
+                'password' => Hash::make($id)
             ]);
         }
         Auth::login($user);
-        return redirect()->with($vcsUser);
+        return redirect();
     }
 }
