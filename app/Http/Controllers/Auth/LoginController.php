@@ -60,6 +60,6 @@ class LoginController extends Controller
             ]);
         }
         Auth::login($user);
-        return redirect()->route('home/index')->with('success');
+        return redirect()->action('HomeController@index');
     }
 }

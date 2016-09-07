@@ -19,7 +19,5 @@ Route::group(['prefix' => 'login'], function () {
     });
 });
 
-Route::group(['middleware' => 'web'], function () {
-    Route::get('auth/social/{provider}', 'Auth\LoginController@redirectToProvider');
-    Route::get('auth/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
-});
+Route::get('auth/social/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
