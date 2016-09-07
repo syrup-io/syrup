@@ -51,11 +51,12 @@ class LoginController extends Controller
         $vcsUser = Socialite::driver($provider)->stateless()->user();
         $user = User::where('email', $vcsUser->getEmail())->first();
         if (! $user) {
-            $id = $vcsUser->getId()->toString();
+            $id = $vcsUser->getId();
             $user = User::create([
                 'name' => $vcsUser->getName(),
                 'email' => $vcsUser->getEmail(),
-                'password' => Hash::make($id)
+                'password' => Hash::make($id),
+                'github_token' => $vcsUser->token;
             ]);
         }
         Auth::login($user);

@@ -28,9 +28,9 @@
 
             <div class="ui center aligned basic segment">
               <div class="ui large buttons">
-                <button class="ui button"><a href="/auth/social/github"><i class="fa fa-github"></i></button></a>
+                <a href="/auth/social/github"><button class="ui button"><i class="fa fa-github"></i></button></a>
                 <div class="or"></div>
-                <button class="ui button"><a href="/auth/social/bitbucket"><i class="fa fa-bitbucket"></i></button></a>
+                <a href="/auth/social/bitbucket"><button class="ui button"><i class="fa fa-bitbucket"></i></button></a>
               </div>
 
             </div>
