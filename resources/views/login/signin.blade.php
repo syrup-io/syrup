@@ -31,7 +31,7 @@
                 Register with
             </div>
               <div class="ui large buttons">
-                <a href="https://github.com/login/oauth/authorize"><button class="ui button"><i class="fa fa-github"></i></button></a>
+                <a href="auth/github"><button class="ui button"><i class="fa fa-github"></i></button></a>
                 <div class="or"></div>
                 <a href="auth/bitbucket"><button class="ui button"><i class="fa fa-bitbucket"></i></button></a>
               </div>

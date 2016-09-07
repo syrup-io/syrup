@@ -53,7 +53,6 @@ class LoginController extends Controller
                 'email' => $vcsUser->getEmail()
             ]);
         }
-        Auth::login($user);
 
         return redirect($this->redirectPath);
 

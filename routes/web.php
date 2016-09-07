@@ -22,7 +22,6 @@ Route::group(['prefix' => 'login'], function () {
     Route::get('register', function ()    {
         return view('login.register');
     });
+    Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
+    Route::get('auth/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
 });
-
-Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('auth/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
