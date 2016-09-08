@@ -6,16 +6,18 @@
 
 Authorization Callback Url must match GITHUB_REDIRECT_URL in .env
 
-### Install
-
-`npm install`
-
-`composer install`
-
 ### Config(Homestead)
 
 `cp .env.example .env`
 
 `mysql -u homestead -psecret`
 
+`create database syrup;`
+
 `php artisan migrate`
+
+### Install
+
+`npm install`
+
+`composer install`
