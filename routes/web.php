@@ -19,5 +19,5 @@ Route::group(['prefix' => 'login'], function () {
     });
 });
 
-Route::get('auth/social/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('auth/social/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
+Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/callback/{provider}', 'Auth\LoginController@handleProviderCallback');

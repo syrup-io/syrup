@@ -56,12 +56,11 @@ class LoginController extends Controller
                 'name' => $vcsUser->getName(),
                 'email' => $vcsUser->getEmail(),
                 'password' => Hash::make($id),
-                'github_avatar_url' => $vcsUser->user['avatar_url'],
-                'github_token' => $vcsUser->token
+                'github_token' => $vcsUser->token,
+                'github_avatar_url' => $vcsUser->user['avatar_url']
             ]);
         }
         Auth::login($user);
-        return Socialite::driver($provider)->scopes(['user', 'read:org'])
-            ->redirect();
+        return redirect()->action('HomeController@index');
     }
 }
