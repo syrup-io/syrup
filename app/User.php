@@ -14,12 +14,14 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'users';
+    
     protected $fillable = [
         'name',
         'email',
         'password',
         'github_token',
-        'github_avatar_url',
+        'github_avatar_url'
     ];
 
     /**
