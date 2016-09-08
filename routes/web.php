@@ -14,10 +14,10 @@ Route::get('/', 'HomeController@landing');
 Route::get('/home', 'HomeController@index');
 
 Route::group(['prefix' => 'login'], function () {
-    Route::get('/', function ()    {
+    Route::get('/', function () {
         return view('login.index');
     });
 });
 
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('auth/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
+Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
