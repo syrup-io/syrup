@@ -10,9 +10,7 @@ Authorization Callback Url must match GITHUB_REDIRECT_URL in .env
 
 `cp .env.example .env`
 
-`mysql -u homestead -psecret`
-
-`create database syrup;`
+create a 'syrup' database;
 
 `php artisan migrate`
 
