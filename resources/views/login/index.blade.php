@@ -5,20 +5,24 @@
 <div class="container" id="loginCard">
     <div class="ui raised centered card">
       <div class="content">
-          <div class="ui centered header">
+          <div class="ui centered header" style="text-transform: uppercase; font-size:1rem">
               Login
           </div>
           <form class="ui form">
             <div class="field">
-              <label>Username</label>
-              <input type="text" name="first-name" placeholder="Username">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="username" name="username" placeholder="Username">
+              </div>
             </div>
             <div class="field">
-              <label>Password</label>
-              <input type="text" name="password" placeholder="Password">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="password" name="password" placeholder="Password">
+              </div>
             </div>
             <div class="ui center aligned basic segment">
-                <button class="ui button" type="submit">Submit</button>
+                <button class="ui blue button" type="submit">Login</button>
             </div>
           </form>
           <div class="ui horizontal divider">

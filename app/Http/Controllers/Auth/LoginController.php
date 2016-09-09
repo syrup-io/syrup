@@ -63,4 +63,8 @@ class LoginController extends Controller
         Auth::login($user);
         return redirect()->action('HomeController@index');
     }
+    public function logout() {
+        Auth::logout();
+        return redirect('home');
+    }
 }

@@ -5,15 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Auth;
+use User;
 use App\Http\Requests;
-use GrahamCampbell\GitHub\Facades\GitHub;
+use Github;
 
 class HomeController extends Controller
 {
     public function index() {
         if (Auth::user()) {
+            $client = new \Github\Client();
+            // dd($client);
             return view('home.index');
-                // ->with(Github::me()->organizations());
         } else {
             return view('home.index');
         }
