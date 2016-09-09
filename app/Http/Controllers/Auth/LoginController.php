@@ -43,12 +43,13 @@ class LoginController extends Controller
 
     public function redirectToProvider($provider)
     {
-        return Socialite::driver($provider)->scopes(['user', 'read:org'])->redirect();
+        return Socialite::driver($provider)
+            ->scopes(['user', 'read:org'])->redirect();
     }
 
     public function handleProviderCallback($provider)
     {
-        $vcsUser = Socialite::driver($provider)->stateless()->user();
+        $vcsUser = Socialite::driver($provider)->user();
         $user = User::where('email', $vcsUser->getEmail())->first();
         if (! $user) {
             $id = $vcsUser->getId();
