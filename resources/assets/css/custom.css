@@ -1,5 +1,19 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";
 
+.screen-only
+
+{
+display: inline-block;
+}
+
+@media screen and (max-width: 560px)
+{
+.screen-only
+{
+display: none;
+}
+
+}
 .sidenav {
     height: 100%;
     width: 0;

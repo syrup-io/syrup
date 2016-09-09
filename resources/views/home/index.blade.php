@@ -4,6 +4,8 @@
 
   @include('nav.main')
 
+  @include('projects.main')
+
 @endsection
 
 @section('scripts')
