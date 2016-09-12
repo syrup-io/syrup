@@ -14,7 +14,12 @@ class HomeController extends Controller
     public function index() {
         if (Auth::user()) {
             $client = new \Github\Client();
-            // dd($client);
+            $user = Auth::user();
+            $token = $user->github_token;
+            $method = Github\Client::AUTH_URL_TOKEN;
+            $client->authenticate($token, $method);
+            $authorizations = $client->api('authorizations')->all();
+            dd($authorizations);
             return view('home.index');
         } else {
             return view('home.index');
