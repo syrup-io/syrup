@@ -15,7 +15,7 @@
   </div>
 
   <div class="header item right aligned">
-    <h3 class="screen-only ui header">
+    <h3 class="screen-only ui header" style="padding-left: 8em;">
       Syrup
     </h3>
   </div>

@@ -48,7 +48,7 @@ class LoginController extends Controller
 
     public function handleProviderCallback($provider)
     {
-        $vcsUser = Socialite::driver($provider)->stateless()->user();
+        $vcsUser = Socialite::driver($provider)->user();
         $user = User::where('email', $vcsUser->getEmail())->first();
         if (! $user) {
             $id = $vcsUser->getId();

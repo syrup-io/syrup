@@ -6,21 +6,21 @@ use Illuminate\Http\Request;
 
 use Auth;
 use User;
+use GitHub;
+use GrahamCampbell\GitHub\GitHubFactory;
 use App\Http\Requests;
-use Github;
 
 class HomeController extends Controller
 {
     public function index() {
         if (Auth::user()) {
-            $client = new \Github\Client();
             $user = Auth::user();
             $token = $user->github_token;
-            $method = Github\Client::AUTH_URL_TOKEN;
-            $client->authenticate($token, $method);
-            $authorizations = $client->api('authorizations')->all();
-            dd($authorizations);
-            return view('home.index');
+            $client = new \Github\Client();
+            $client->authenticate($token, 'http_token');
+            $organizations = $client->api('current_user')->organizations();
+            return view('home.index')
+                ->with($organizations);
         } else {
             return view('home.index');
         }
