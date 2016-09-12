@@ -4,7 +4,7 @@
 
   @include('nav.main')
 
-  @include('projects.main')
+  @include('projects.index')
 
 @endsection
 
