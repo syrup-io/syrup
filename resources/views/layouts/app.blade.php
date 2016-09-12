@@ -20,7 +20,9 @@
     </head>
 
     <body>
-        
+
+        @include('nav.main')
+
         @yield('content')
 
         <!-- Scripts -->

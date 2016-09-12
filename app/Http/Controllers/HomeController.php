@@ -20,7 +20,7 @@ class HomeController extends Controller
             $client->authenticate($token, 'http_token');
             $organizations = $client->api('current_user')->organizations();
             return view('home.index')
-                ->with($organizations);
+                ->with('organizations', $organizations);
         } else {
             return view('home.index');
         }
