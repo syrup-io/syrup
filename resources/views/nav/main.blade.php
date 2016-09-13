@@ -20,15 +20,12 @@
 </div>
 
 @section('scripts')
-@parent
+  @parent
+    <script>
 
-<script>
-$('.ui.dropdown')
-  .dropdown()
-;
-$('.ui.search')
-  .search({ type: 'category' });
+        $('.ui.dropdown').dropdown();
+        $('.ui.search').search({ type: 'category' });
 
-</script>
+    </script>
 
 @endsection

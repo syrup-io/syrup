@@ -1,15 +1,5 @@
-<div class="ui container">
-    <div class="ui centered header" style="padding-top:2em;">
-        <h3> organizations </h3>
-    </div>
-    <div class="ui pointing secondary menu">
-      @foreach($organizations as $organization)
-      <a class="item" data-tab="organization">{{ $organization['login'] }}</a>
-      @endforeach
-    </div>
+@foreach($organizations as $organization)
+<div class="ui top attached tabular menu">
+  <div class="item">{{ $organization['login'] }}</div>
 </div>
-@section('scripts')
-<script>
-$('.tabular.menu .item').tab();
-</script>
-@endsection
+@endforeach

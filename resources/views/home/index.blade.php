@@ -6,10 +6,6 @@
 
   @include('project.organizations')
 
-@elseif(isset($repositories))
-
-  @include('project.repositories')
-
 @endif
 
 @endsection

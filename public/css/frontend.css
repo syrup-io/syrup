@@ -6,11 +6,19 @@
 display: inline-block;
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 540px)
 {
 .screen-only
 {
 display: none;
+}
+
+}
+@media screen and (max-width: 660px)
+{
+.screen-only
+{
+padding-left: 8em !important;
 }
 
 }
@@ -62,6 +70,11 @@ display: none;
 
 #loginCard {
   margin-top: 4em;
+}
+
+div#main.ui.top.attached.borderless.large.menu {
+    border-left-style: none !important;
+    border-right-style: none !important;
 }
 
  /*

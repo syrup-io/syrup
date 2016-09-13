@@ -8,8 +8,3 @@
       @endforeach
     </div>
 </div>
-@section('scripts')
-<script>
-$('.tabular.menu .item').tab();
-</script>
-@endsection
