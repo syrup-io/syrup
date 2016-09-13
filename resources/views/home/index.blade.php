@@ -2,6 +2,10 @@
 
 @section('content')
 
-  @include('projects.index')
+@if(isset($organizations))
+
+  @include('projects.organizations')
+
+@endif
 
 @endsection

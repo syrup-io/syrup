@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.landing')
     @section('content')
-        <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui vertical masthead center aligned segment">
             <div class="ui text container">
-                <h1 class="ui inverted header">
+                <h1 class="ui header">
                     Syrup
                 </h1>
                 <div class="ui item">
-                    <a href="/home" style="color:white"><i class="fa fa-4x fa-home"></i></a>
+                    <a href="/home" style="color:black"><i class="fa fa-4x fa-home"></i></a>
                 </div>
             </div>
         </div>

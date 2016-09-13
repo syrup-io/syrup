@@ -21,7 +21,6 @@
 
     <body>
         <div id="main">
-            @include('nav.main')
 
             @yield('content')
         </div>
