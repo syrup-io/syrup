@@ -2,9 +2,11 @@
 
 @section('content')
 
-@if(isset($organizations))
+@if (Auth::check() and isset($orgs))
 
-  @include('project.organizations')
+  @include('project.orgs')
+
+  @include('project.repos')
 
 @endif
 

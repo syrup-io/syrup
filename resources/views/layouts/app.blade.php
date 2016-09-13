@@ -27,6 +27,7 @@
         </div>
         <!-- Scripts -->
         <script src="{{ elixir('js/frontend.js') }}"></script>
+        <script src="{{ elixir('/dist/app.js') }}"></script>
         @yield('scripts')
 
     </body>
