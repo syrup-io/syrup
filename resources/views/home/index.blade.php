@@ -4,7 +4,11 @@
 
 @if(isset($organizations))
 
-  @include('projects.organizations')
+  @include('project.organizations')
+
+@elseif(isset($repositories))
+
+  @include('project.repositories')
 
 @endif
 

@@ -19,7 +19,9 @@ class HomeController extends Controller
             $client = new \Github\Client();
             $client->authenticate($token, 'http_token');
             $organizations = $client->api('current_user')->organizations();
+            $repositories = $client->api('current_user')->repositories();
             return view('home.index')
+                ->with('repositories', $repositories)
                 ->with('organizations', $organizations);
         } else {
             return view('home.index');
