@@ -1,0 +1,10 @@
+{
+    "name": "syrup/bitbucket",
+    "authors": [
+        {
+            "name": "jacob zlogar",
+            "email": "jacob.zlogar@gmail.com"
+        }
+    ],
+    "require": {}
+}

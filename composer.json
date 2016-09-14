@@ -9,8 +9,7 @@
         "laravel/framework": "5.3.*",
         "php-http/guzzle6-adapter": "^1.1",
         "laravel/socialite": "^2.0",
-        "knplabs/github-api": "^1.7",
-        "graham-campbell/github": "^4.4"
+        "knplabs/github-api": "^1.7"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -24,7 +23,9 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Syrup\\Github\\": "packages/syrup/github/src",
+            "Syrup\\Bitbucket\\": "packages/syrup/bitbucket/src"
         }
     },
     "autoload-dev": {

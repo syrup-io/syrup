@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 use Auth;
 use User;
-use GitHub;
-use GrahamCampbell\GitHub\GitHubFactory;
 use App\Http\Requests;
 
 class HomeController extends Controller
