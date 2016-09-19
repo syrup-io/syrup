@@ -58,8 +58,6 @@ padding-left: 8em !important;
 
 #main {
     transition: margin-left .5s;
-    padding-top: 10px;
-    padding-bottom: 16px;
     border-top: none;
 }
 

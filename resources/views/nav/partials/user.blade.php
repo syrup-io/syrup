@@ -1,4 +1,4 @@
-<div class="right menu" style="padding-top:.5em">
+<div class="right menu">
   @if(Auth::user())
 
       <div class="ui dropdown item">
