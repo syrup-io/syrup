@@ -4,7 +4,7 @@
 
 @if (Auth::check())
 
-@include('project.main')
+  @include('project.main')
 
 @endif
 
