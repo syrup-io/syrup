@@ -14,14 +14,17 @@
         <!-- <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}"> -->
 
         <!-- CSS -->
+        <style>
+            @import 'https://fonts.googleapis.com/css?family=Raleway';
+        </style>
         <link href="{{ elixir('css/frontend.css') }}" rel="stylesheet">
         @yield('styles')
 
     </head>
 
-    <body>
-        <div id="main">
 
+    <body class="circuit-grid">
+        <div id="main">
             @yield('content')
         </div>
         <!-- Scripts -->
