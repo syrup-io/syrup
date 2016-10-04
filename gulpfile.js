@@ -18,13 +18,13 @@ elixir(mix => {
         'css/custom.css',
         '../../node_modules/semantic-ui/dist/semantic.min.css',
     ], 'public/css/frontend.css', 'resources/assets' )
+    mix.webpack([
+        'app.js'
+    ])
     mix.scripts([
+        '../../public/js/all.js',
         'js/custom.js',
         'js/jquery-3.1.0.min.js',
         '../../node_modules/semantic-ui/dist/semantic.min.js',
     ], 'public/js/frontend.js', 'resources/assets' )
-    // mix.webpack(
-    //     './resources/assets/js/app.js',
-    //     './public/dist'
-    // );
 });
