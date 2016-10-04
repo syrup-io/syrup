@@ -43,7 +43,8 @@ class LoginController extends Controller
 
     public function redirectToProvider($provider)
     {
-        return Socialite::driver($provider)->scopes(['user', 'read:org'])->redirect();
+        return Socialite::driver($provider)
+            ->scopes(['user', 'read:org'])->redirect();
     }
 
     public function handleProviderCallback($provider)
