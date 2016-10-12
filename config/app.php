@@ -178,8 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-        Syrup\Github\GithubServiceProvider::class,
-        Syrup\Bitbucket\BitbucketServiceProvider::class,
+        App\Providers\GithubServiceProvider::class,
 
     ],
 

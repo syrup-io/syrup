@@ -8,7 +8,7 @@ class Project extends Model
 {
     protected $table = 'projects';
 
-    protected $fillabel = [
+    protected $fillable = [
         'organization_url',
         'repository_url',
         'commit_id',

@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Providers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use Illuminate\Support\ServiceProvider;
 use App\Helpers\Github;
 
-class GitHubController extends Controller
+class GithubServiceProvider extends ServiceProvider
 {
     protected $defer = true;
     /**
@@ -29,8 +27,9 @@ class GitHubController extends Controller
     {
         $this->app->bind('App\Helpers\Contracts\GithubContract', function(){
             return new Github();
-        });
+        }); 
     }
+
     public function provides()
     {
         return ['App\Helpers\Contracts\GithubContract'];
