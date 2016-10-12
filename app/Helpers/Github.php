@@ -1,10 +1,21 @@
-<? php
-namespace app\Helpers;
+<?php
+namespace App\Helpers;
+
+use Auth;
+use App\Helpers\Contracts\GithubContract;
 
 class Github implements GithubContract
 {
-    public function retrieve($token)
+    public function repos()
     {
-        return 'hi';
+        dd(Auth::user());
+    }
+    public function commits()
+    {
+        // return commits
+    }
+    public function orgs()
+    {
+        //return orgs
     }
 }

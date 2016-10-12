@@ -1,7 +1,10 @@
-<? php
-namespace app\Helpers\Contracts;
+<?php
 
-interface GithubContract
+namespace App\Helpers\Contracts;
+
+Interface GithubContract
 {
-    public function retrieve($token);
+    public function repos();
+    public function commits();
+    public function orgs();
 }

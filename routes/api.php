@@ -17,6 +17,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
-Route::get('/github', function() {
-    return 'h';
-});
+Route::resource('github', 'GithubController');
+// Route::resource('bitbucket', 'BitbucketController');

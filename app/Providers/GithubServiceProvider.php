@@ -27,7 +27,7 @@ class GithubServiceProvider extends ServiceProvider
     {
         $this->app->bind('App\Helpers\Contracts\GithubContract', function(){
             return new Github();
-        }); 
+        });
     }
 
     public function provides()

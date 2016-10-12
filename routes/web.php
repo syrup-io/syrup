@@ -19,12 +19,6 @@ Route::group(['prefix' => 'login'], function () {
     });
 });
 
-Route::group(['prefix' => 'project'], function () {
-    Route::get('/create', function() {
-        return view('project.create');
-    });
-});
-
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('/logout', 'Auth\LoginController@logout');

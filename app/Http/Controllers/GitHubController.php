@@ -5,34 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
+use Auth;
 use App\Helpers\Github;
 
 class GitHubController extends Controller
 {
-    protected $defer = true;
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function index(Github $github)
     {
-        //
-    }
-
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->app->bind('App\Helpers\Contracts\GithubContract', function(){
-            return new Github();
-        });
-    }
-    public function provides()
-    {
-        return ['App\Helpers\Contracts\GithubContract'];
+        dd(Auth::user());
+        dd($github->repos());
     }
 }
