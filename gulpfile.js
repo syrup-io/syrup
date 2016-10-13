@@ -1,6 +1,6 @@
 const elixir = require('laravel-elixir');
 
-require('laravel-elixir-vue');
+require('laravel-elixir-vue-2');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,11 +18,9 @@ elixir(mix => {
         'css/custom.css',
         '../../node_modules/semantic-ui/dist/semantic.min.css',
     ], 'public/css/frontend.css', 'resources/assets' )
-    mix.webpack([
-        'app.js'
-    ])
+    mix.webpack('app.js')
     mix.scripts([
-        '../../public/js/all.js',
+        '../../public/js/app.js',
         'js/custom.js',
         'js/jquery-3.1.0.min.js',
         '../../node_modules/semantic-ui/dist/semantic.min.js',

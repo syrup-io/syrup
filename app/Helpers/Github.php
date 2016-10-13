@@ -6,9 +6,9 @@ use App\Helpers\Contracts\GithubContract;
 
 class Github implements GithubContract
 {
-    public function repos()
+    public function repos($user)
     {
-        dd(Auth::user());
+        dd($user);
     }
     public function commits()
     {

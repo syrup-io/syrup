@@ -1,10 +1,10 @@
 require('./bootstrap');
 
-Vue.component('organizations', require('./components/Organization.vue'));
+Vue.component('example', require('./components/Example.vue'));
 
- new Vue({
-   el: 'body',
-   data: {
-     message: 'Hello Vue.js!'
-   }
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
 })
